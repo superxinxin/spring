@@ -12,7 +12,7 @@
 <context:component-scan base-package="com.how2java.aspect"/><br>
 <context:component-scan base-package="com.how2java.service"/><br>
 以及AOP注解：<br>
->>> <aop:aspectj-autoproxy/> <br>
+<aop:aspectj-autoproxy/> <br>
 > 2，com.how2java.pojo包中主要有Category和Product两个类，基于@Component注解得到两个bean：c和p。Product中基于@Autowired自动注入c。<br>
 > 3，com.how2hava.service包中ProductService类中基于@Component注解得到ps，doSomeThing方法输出一句话，该类主要练习AOP<br>
 > 4，com.how2java.aspect包中LoggerAspect类基于@Around(value = "execution(* com.how2java.service.ProductService.*(..))")注解实现AOP，对com.how2java.service.ProductService这个类中的所有方法进行切面操作 <br>
