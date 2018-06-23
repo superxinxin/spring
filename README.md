@@ -1,16 +1,17 @@
 # spring
-Spring是一个基于IOC和AOP的结构J2EE系统的框架<br>
-IOC 反转控制 Inversion Of Control<br>
+Spring是一个基于IOC和AOP的结构J2EE系统的框架
+-----------------------------------------
+#IOC 反转控制 Inversion Of Control#
 简单说就是创建对象由以前的程序员自己new 构造方法来调用，变成了交由Spring创建对象<br>
-DI 依赖注入 Dependency Inject<br>
+#DI 依赖注入 Dependency Inject<br>
 简单地说就是拿到的对象的属性，已经被注入好相关值了，直接使用即可。<br>
 <br>
 spring项目简介：<br>
 基于注解方式的IOC、DI、AOP、测试。<br>
 1，applicationContext.xml中主要配置相关语句扫描某些包下的注解：
-**<context:component-scan base-package="com.how2java.pojo"><br>
-**<context:component-scan base-package="com.how2java.aspect"/><br>
-**<context:component-scan base-package="com.how2java.service"/><br>
+<context:component-scan base-package="com.how2java.pojo"><br>
+<context:component-scan base-package="com.how2java.aspect"/><br>
+<context:component-scan base-package="com.how2java.service"/><br>
 以及AOP注解：<br>
 <aop:aspectj-autoproxy/> <br>
 2，com.how2java.pojo包中主要有Category和Product两个类，基于@Component注解得到两个bean：c和p。Product中基于@Autowired自动注入c。<br>
